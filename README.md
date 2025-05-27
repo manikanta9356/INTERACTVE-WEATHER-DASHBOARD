@@ -72,7 +72,7 @@ weather_forecast.csv
 
 These files can be reused for analysis, visualization, or integration with other tools.
 
-#output
+## output
 
 ![Image](https://github.com/user-attachments/assets/61f5202a-4bd3-475c-af91-e4a1254fca37)
 
