@@ -1,80 +1,128 @@
-# -API-INTEGRATION-AND-DATA-VISUALIZATION
+# 🌦️ API-INTEGRATION-AND-DATA-VISUALIZATION
 
-COMPANY: CODTECH IT SOLUTIONS
+## Weather Dashboard with Streamlit & OpenWeatherMap API
 
-NAME: Gattadi Manikanta
+This project is a **Weather Dashboard** built using **Python** and **Streamlit**. It integrates with the **OpenWeatherMap API** to fetch real-time weather data and uses **Plotly** for data visualization. The dashboard displays **current weather conditions** along with **mock historical trends** for temperature, humidity, and precipitation.
 
-INTERN ID: CT04DM1361
+---
 
-DOMAIN: Python Programming
+## ✅ Features
 
-DURATION: 4 Weeks
+- Fetch real-time weather data from **OpenWeatherMap**
+- Display **current weather** with emojis for conditions
+- Show **5-day forecast** with average temperature per day
+- Visualize **temperature, humidity, and precipitation trends** using **Plotly**
+- Generate **mock historical data** for visualizations
+- Download weather data as a **CSV file**
+- Simple and responsive **Streamlit UI**
+- **Error handling** and **API key protection** using `.env` file
+- **Caching with `@st.cache_data`** for better performance
 
-MENTOR: NEELA SANTOSH
+---
 
-# wheather integration and data visualization.
+## 🛠 Technologies Used
 
-This Python-based Weather Dashboard Application is a command-line tool designed to fetch and visualize weather data for a specified city using the OpenWeatherMap API. The script allows users to input a city name, after which it retrieves both the current weather conditions and a 5-day forecast broken into 3-hour intervals.
+- [Python](https://www.python.org/)
+- [Streamlit](https://streamlit.io/)
+- [Plotly](https://plotly.com/)
+- [OpenWeatherMap API](https://openweathermap.org/api)
+- [pandas](https://pandas.pydata.org/)
+- [python-dotenv](https://pypi.org/project/python-dotenv/)
 
-Current Weather Retrieval: Retrieves real-time weather data for any user-input city.
+---
 
-5-Day Forecast: Fetches a detailed 5-day forecast with 3-hour intervals (up to 40 time points).
+## 🚀 Getting Started (Step-by-Step Guide)
 
-Data Processing: Transforms raw JSON responses into well-structured pandas DataFrames.
+### ✅ Prerequisites
+Ensure you have the following installed:
+- **Python 3.8+** → [Download Python](https://www.python.org/downloads/)
+- **Git** (optional, for cloning) → [Download Git](https://git-scm.com/)
+- **OpenWeatherMap API Key** → [Get it here](https://openweathermap.org/api)
 
-Visualizations: Creates and saves a dashboard consisting of four informative subplots.
+---
 
-CSV Export: Saves processed data into CSV files for current and forecast weather.
+### 1️⃣ Clone or Download the Repository
+Using Git:
+git clone https://github.com/Praneesh-Gattadi/API-INTEGRATION-AND-DATA-VISUALIZATION.git
+cd API-INTEGRATION-AND-DATA-VISUALIZATION
+Or download ZIP from GitHub and extract it.
 
-Error Handling: Includes robust error handling for failed API requests and data processing steps.
+2️⃣ Set Up a Virtual Environment (Recommended)
+Create and activate a virtual environment:
 
-Modules and Workflow
-1. User Input
-The program prompts the user to enter a city name. This city name is used in the API requests to fetch the respective weather data.
+python -m venv env
 
-2. Fetching Weather Data
-The get_weather_data() function connects to the OpenWeatherMap API using the city name and a secure API key stored in a .env file. It fetches two sets of data:
+Activate it
+On Windows:
+env\Scripts\activate
+On macOS/Linux:
+source env/bin/activate
 
-Current Weather Data
+3️⃣ Install Dependencies
+Create a requirements.txt file with:
 
-5-Day Forecast Data (in 3-hour intervals)
+streamlit
+requests
+pandas
+plotly
+python-dotenv
 
-Both datasets are returned as JSON objects.
+Then install:
+pip install -r requirements.txt
 
-3. Processing API Responses
-The process_data() function converts the JSON responses into two pandas DataFrames:
+4️⃣ Get Your OpenWeatherMap API Key
+Sign up at OpenWeatherMap
 
-current_df holds real-time weather metrics such as temperature, humidity, wind speed, and conditions.
+Go to Profile > API Keys
 
-forecast_df contains forecast data over the next five days, including temperature trends, humidity, wind speed, and conditions.
+Copy your API key
 
-Datetime fields are converted from UNIX timestamps to human-readable formats using the datetime module.
 
-4. Visualization
-The create_visualizations() function creates a 2x2 subplot dashboard using matplotlib and seaborn. The plots include:
+5️⃣ Configure Environment Variables
+Create a .env file in the project root:
+OPENWEATHER_API_KEY=your_api_key_here
+important: Add .env to .gitignore:
+.env
 
-Bar Chart: Snapshot of current temperature, humidity, wind speed, and "feels like" temperature.
+6️⃣ Run the Weather Dashboard
+Start the app:
+streamlit run app.py
+You should see the dashboard at:
+http://localhost:8501
 
-Line Plot: 5-day temperature forecast.
+Alternative way:
 
-Bar Chart: Frequency of various weather conditions (e.g., Clear, Rain).
+Copy your app.py path
 
-Scatter Plot: Correlation between wind speed and humidity, colored by temperature.
+Open CMD or Terminal:
 
-The dashboard is saved as a high-resolution PNG image (weather_dashboard.png) and displayed to the user.
+cd path_to_your_file
+streamlit run app.py
 
-5. CSV Export
-The processed DataFrames are saved locally as:
+📌 Project Structure
 
-current_weather.csv
+API-INTEGRATION-AND-DATA-VISUALIZATION/
 
-weather_forecast.csv
+├── app.py               
+├── requirements.txt     
+├── .env                 
+└── README.md            
 
-These files can be reused for analysis, visualization, or integration with other tools.
+💡 Notes
 
-## output
+Make sure your API key is valid and active.
 
-![Image](https://github.com/user-attachments/assets/61f5202a-4bd3-475c-af91-e4a1254fca37)
+Free OpenWeatherMap API allows 60 calls per minute.
 
-![Image](https://github.com/user-attachments/assets/e9007a57-2781-4694-aa15-9c46cca09678)
+Do NOT share your .env file publicly.
 
+## OUTPUT
+
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/eb740d61-e3d8-4c94-b2e1-57c75b619ee5" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/81f11835-043b-4b09-a70f-8fb06978ec11" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/1f1c1519-bad5-4361-ac06-e51a936eb352" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/85d1bcf2-bf09-4c34-8831-f282f8d655ac" />
+<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/52946539-61cc-491b-a88e-74cfe10d1990" />
+
+✨ Author: Praneesh Gattadi
+Made with ❤️ using Streamlit
