@@ -124,5 +124,5 @@ Do NOT share your .env file publicly.
 <img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/85d1bcf2-bf09-4c34-8831-f282f8d655ac" />
 <img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/52946539-61cc-491b-a88e-74cfe10d1990" />
 
-✨ Author: Praneesh Gattadi
+✨ Author: Manikanta Gattadi
 Made with ❤️ using Streamlit
