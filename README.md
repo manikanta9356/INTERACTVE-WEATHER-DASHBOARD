@@ -1,4 +1,4 @@
-# 🌦️ API-INTEGRATION-AND-DATA-VISUALIZATION
+# 🌦️ INTERACTIVE-WEATHER-DASHBOARD
 
 ## Weather Dashboard with Streamlit & OpenWeatherMap API
 
